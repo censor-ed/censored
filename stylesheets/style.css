@@ -1,0 +1,8 @@
+/* line 2, /Projects/censored-presets/source/stylesheets/style.sass */
+table td {
+  vertical-align: middle; }
+
+/* line 5, /Projects/censored-presets/source/stylesheets/style.sass */
+input[type=checkbox] {
+  width: 15px;
+  height: 15px; }
