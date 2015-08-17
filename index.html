@@ -10,11 +10,13 @@
     <div class='container'>
       <div class='row'>
         <div class='col-md-8 col-md-offset-2'>
-          <h1>はちまバスターNGリスト</h1>
+          <div class='page-header'>
+            <h1>はちまバスターNGリスト</h1>
+          </div>
           <p>
-            ブロックしたいサイトをチェックして、結果を
+            Chromeの拡張機能である
             <a href="https://chrome.google.com/webstore/detail/%E3%81%AF%E3%81%A1%E3%81%BE%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC/kmjdodljbndkgaiakbdciipegjnbcmog?hl=ja">はちまバスター</a>
-            のオプションにコピペしてください。
+            用の正規表現を提供します。ブロックしたいサイトをチェックして、結果をはちまバスターのオプションにコピペしてください。
             オプションはChromeのその他のツール→拡張機能から開けます。
           </p>
           <div id='presets'>
@@ -42,14 +44,15 @@
                 </tr>
               </tbody>
             </table>
-            <textarea class='form-control' id='output' readonly rows='5' v-on='click: focus, blur: unfocus' wrap='off'>{{values().join("\n")}}</textarea>
             <div class='text-right'>
               選択した数:{{checkedSize()}}/{{$data.presets.length}}
             </div>
+            <textarea class='form-control' id='output' readonly rows='5' v-on='click: focus, blur: unfocus' wrap='off'>{{values().join("\n")}}</textarea>
           </div>
         </div>
       </div>
       <div class='btn btn-primary' id='decide'>決定</div>
+      <br>
     </div>
   </body>
 </html>
