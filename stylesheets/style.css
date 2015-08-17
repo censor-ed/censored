@@ -12,3 +12,27 @@ table td {
 input[type=checkbox] {
   width: 15px;
   height: 15px; }
+
+/* line 22, /Projects/censored-presets/source/stylesheets/style.sass */
+#go-to-top {
+  position: fixed;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  color: #23527C;
+  cursor: pointer;
+  right: 30px;
+  top: 30px; }
+
+/* line 27, /Projects/censored-presets/source/stylesheets/style.sass */
+#go-to-bottom {
+  position: fixed;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  color: #23527C;
+  cursor: pointer;
+  right: 30px;
+  bottom: 30px; }

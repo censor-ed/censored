@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    return new Vue({
+    new Vue({
       el: "#presets",
       data: {
         presets: []
@@ -70,6 +70,31 @@
         checkedSize: function() {
           return this.values().length;
         }
+      }
+    });
+    $("#go-to-top").hide();
+    $("#go-to-top").on("click", function() {
+      return $("body, html").animate({
+        scrollTop: 0
+      }, 500);
+    });
+    $(window).scroll(function() {
+      if ($(this).scrollTop() >= 5) {
+        return $("#go-to-top").fadeIn();
+      } else {
+        return $("#go-to-top").fadeOut();
+      }
+    });
+    $("#go-to-bottom").on("click", function() {
+      return $("body, html").animate({
+        scrollTop: $(document).height()
+      }, 500);
+    });
+    return $(window).scroll(function() {
+      if (($(document).height() - ($(this).height() + $(this).scrollTop())) / $(this).height() === 0) {
+        return $("#go-to-bottom").fadeOut();
+      } else {
+        return $("#go-to-bottom").fadeIn();
       }
     });
   });
