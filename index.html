@@ -21,127 +21,33 @@
             <table class='table table-striped'>
               <thead>
                 <tr>
-                  <th>
+                  <th class='check'>
                     <input type='checkbox' v-on='click: toggle'>
                   </th>
-                  <th></th>
+                  <th class='name'>
+                    <input class='form-control' placeholder='フィルタ' type='text' v-model='filterText'>
+                  </th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr v-repeat='presets | filterBy filterText in name'>
                   <td>
-                    <input class='preset' id='i1' type='checkbox' v-on='change: update' value='blog\.esuteru\.com'>
+                    <input class='preset' id='{{$index}}' type='checkbox' v-model='checked' value='{{regexp}}'>
                   </td>
                   <td>
-                    <label for='i1'>はちま起稿</label>
+                    <label for='{{$index}}'>{{name}}</label>
                   </td>
                   <td>
-                    <label for='i1' title='blog\.esuteru\.com'>blog\.esuteru\.com</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i2' type='checkbox' v-on='change: update' value='twitter\.com/htmk73(/.*)?$'>
-                  </td>
-                  <td>
-                    <label for='i2'>はちま起稿(Twitter)</label>
-                  </td>
-                  <td>
-                    <label for='i2' title='twitter\.com/htmk73(/.*)?$'>twitter\.com/htmk73(/.*)?$</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i3' type='checkbox' v-on='change: update' value='ja-jp\.facebook\.com/pages/%E3%81%AF%E3%81%A1%E3%81%BE%E8%B5%B7%E7%A8%BF/131806350359370'>
-                  </td>
-                  <td>
-                    <label for='i3'>はちま起稿(Facebook)</label>
-                  </td>
-                  <td>
-                    <label for='i3' title='ja-jp\.facebook\.com/pages/%E3%81%AF%E3%81%A1%E3%81%BE%E8%B5%B7%E7%A8%BF/131806350359370'>ja-jp\.facebook\.com/pages/%E3%81%AF%E3%81...</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i4' type='checkbox' v-on='change: update' value='jin115\.com'>
-                  </td>
-                  <td>
-                    <label for='i4'>オレ的ゲーム速報＠刃</label>
-                  </td>
-                  <td>
-                    <label for='i4' title='jin115\.com'>jin115\.com</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i5' type='checkbox' v-on='change: update' value='twitter\.com/jin115(/.*)?$'>
-                  </td>
-                  <td>
-                    <label for='i5'>オレ的ゲーム速報＠刃(Twitter)</label>
-                  </td>
-                  <td>
-                    <label for='i5' title='twitter\.com/jin115(/.*)?$'>twitter\.com/jin115(/.*)?$</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i6' type='checkbox' v-on='change: update' value='yaraon-blog\.com'>
-                  </td>
-                  <td>
-                    <label for='i6'>やらおん</label>
-                  </td>
-                  <td>
-                    <label for='i6' title='yaraon-blog\.com'>yaraon-blog\.com</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i7' type='checkbox' v-on='change: update' value='pokemon-matome\.net'>
-                  </td>
-                  <td>
-                    <label for='i7'>ぽけりん</label>
-                  </td>
-                  <td>
-                    <label for='i7' title='pokemon-matome\.net'>pokemon-matome\.net</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i8' type='checkbox' v-on='change: update' value='^https?://matome\.naver\.jp'>
-                  </td>
-                  <td>
-                    <label for='i8'>NAVERまとめ</label>
-                  </td>
-                  <td>
-                    <label for='i8' title='^https?://matome\.naver\.jp'>^https?://matome\.naver\.jp</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i9' type='checkbox' v-on='change: update' value='damage0\.blomaga\.jp'>
-                  </td>
-                  <td>
-                    <label for='i9'>ダメージ0</label>
-                  </td>
-                  <td>
-                    <label for='i9' title='damage0\.blomaga\.jp'>damage0\.blomaga\.jp</label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class='preset' id='i10' type='checkbox' v-on='change: update' value='yusaani\.com'>
-                  </td>
-                  <td>
-                    <label for='i10'>ゆさアニ</label>
-                  </td>
-                  <td>
-                    <label for='i10' title='yusaani\.com'>yusaani\.com</label>
+                    <label for='{{$index}}' title='{{regexp}}'>{{truncate(regexp, 45)}}</label>
                   </td>
                 </tr>
               </tbody>
             </table>
-            <textarea class='form-control' id='output' readonly rows='5' v-on='click: focus' wrap='off'></textarea>
+            <textarea class='form-control' id='output' readonly rows='5' v-on='click: focus' wrap='off'>{{values().join("\n")}}</textarea>
+            <div class='text-right'>
+              選択した数:{{checkedSize()}}/{{$data.presets.length}}
+            </div>
           </div>
         </div>
       </div>

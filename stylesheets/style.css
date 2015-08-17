@@ -1,8 +1,14 @@
 /* line 2, /Projects/censored-presets/source/stylesheets/style.sass */
+table th.check, table td.check {
+  width: 30px; }
+/* line 4, /Projects/censored-presets/source/stylesheets/style.sass */
+table th.name {
+  width: 300px; }
+/* line 6, /Projects/censored-presets/source/stylesheets/style.sass */
 table td {
   vertical-align: middle; }
 
-/* line 5, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 9, /Projects/censored-presets/source/stylesheets/style.sass */
 input[type=checkbox] {
   width: 15px;
   height: 15px; }
