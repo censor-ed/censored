@@ -18,7 +18,7 @@
             オプションはChromeのその他のツール→拡張機能から開けます。
           </p>
           <div id='presets'>
-            <table class='table table-striped'>
+            <table class='table table-striped table-hover'>
               <thead>
                 <tr>
                   <th class='check'>
@@ -31,15 +31,13 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-repeat='presets | filterBy filterText in name'>
+                <tr v-on='click: click(this)' v-repeat='presets | filterBy filterText in name'>
                   <td>
-                    <input class='preset' id='{{$index}}' type='checkbox' v-model='checked' value='{{regexp}}'>
+                    <input class='preset' type='checkbox' v-model='checked' value='{{regexp}}'>
                   </td>
-                  <td>
-                    <label for='{{$index}}'>{{name}}</label>
-                  </td>
-                  <td>
-                    <label for='{{$index}}' title='{{regexp}}'>{{truncate(regexp, 45)}}</label>
+                  <td>{{name}}</td>
+                  <td class='regexp'>
+                    <span title='{{regexp}}'>{{truncate(regexp, 45)}}</span>
                   </td>
                 </tr>
               </tbody>

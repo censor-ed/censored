@@ -1,19 +1,30 @@
 /* line 2, /Projects/censored-presets/source/stylesheets/style.sass */
+table tr {
+  cursor: pointer; }
+/* line 4, /Projects/censored-presets/source/stylesheets/style.sass */
 table th.check, table td.check {
   width: 30px; }
-/* line 4, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 6, /Projects/censored-presets/source/stylesheets/style.sass */
 table th.name {
   width: 300px; }
-/* line 6, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 8, /Projects/censored-presets/source/stylesheets/style.sass */
 table td {
-  vertical-align: middle; }
+  vertical-align: middle !important; }
+  /* line 10, /Projects/censored-presets/source/stylesheets/style.sass */
+  table td label {
+    font-weight: normal; }
+/* line 12, /Projects/censored-presets/source/stylesheets/style.sass */
+table td.regexp {
+  color: darkred;
+  font-family: Courier New;
+  font-size: small; }
 
-/* line 9, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 18, /Projects/censored-presets/source/stylesheets/style.sass */
 input[type=checkbox] {
   width: 15px;
   height: 15px; }
 
-/* line 22, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 31, /Projects/censored-presets/source/stylesheets/style.sass */
 #go-to-top {
   position: fixed;
   font-size: 15px;
@@ -25,7 +36,7 @@ input[type=checkbox] {
   right: 30px;
   top: 30px; }
 
-/* line 27, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 36, /Projects/censored-presets/source/stylesheets/style.sass */
 #go-to-bottom {
   position: fixed;
   font-size: 15px;
