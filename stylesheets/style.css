@@ -8,47 +8,31 @@ table th.check, table td.check {
 table th.name {
   width: 300px; }
 /* line 12, /Projects/censored-presets/source/stylesheets/style.sass */
+table th {
+  vertical-align: middle !important; }
+/* line 14, /Projects/censored-presets/source/stylesheets/style.sass */
 table td {
   vertical-align: middle !important; }
-  /* line 14, /Projects/censored-presets/source/stylesheets/style.sass */
+  /* line 16, /Projects/censored-presets/source/stylesheets/style.sass */
   table td label {
     font-weight: normal; }
-/* line 16, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 18, /Projects/censored-presets/source/stylesheets/style.sass */
 table td.regexp {
   color: darkred !important;
   font-family: Courier New !important;
   font-size: small; }
 
-/* line 19, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 21, /Projects/censored-presets/source/stylesheets/style.sass */
 textarea {
   color: darkred !important;
   font-family: Courier New !important; }
 
-/* line 22, /Projects/censored-presets/source/stylesheets/style.sass */
+/* line 24, /Projects/censored-presets/source/stylesheets/style.sass */
 input[type=checkbox] {
   width: 15px;
   height: 15px; }
 
-/* line 35, /Projects/censored-presets/source/stylesheets/style.sass */
-#go-to-top {
+/* line 28, /Projects/censored-presets/source/stylesheets/style.sass */
+#decide {
   position: fixed;
-  font-size: 15px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 1px solid silver;
-  color: #23527C;
-  cursor: pointer;
-  right: 30px;
-  top: 30px; }
-
-/* line 40, /Projects/censored-presets/source/stylesheets/style.sass */
-#go-to-bottom {
-  position: fixed;
-  font-size: 15px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 1px solid silver;
-  color: #23527C;
-  cursor: pointer;
-  right: 30px;
-  bottom: 30px; }
+  font-size: 15px; }
