@@ -38,7 +38,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-on='click: click(this)' v-repeat='presets | filterBy filterText in name'>
+                <tr v-class='checked: checked' v-on='click: click(this)' v-repeat='presets | filterBy filterText in name'>
                   <td>
                     <input class='preset' type='checkbox' v-model='checked' value='{{regexp}}'>
                   </td>
