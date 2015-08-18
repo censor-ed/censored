@@ -53,7 +53,7 @@
             <div class='text-right'>
               選択した数:{{checkedSize()}}/{{$data.presets.length}}
             </div>
-            <textarea class='form-control' id='output' readonly rows='5' v-on='click: focus, blur: unfocus' wrap='off'>{{values().join("\n")}}</textarea>
+            <textarea class='form-control' id='output' readonly rows='15' v-on='click: focus, blur: unfocus' wrap='off'>{{values().join("\n")}}</textarea>
           </div>
         </div>
       </div>
