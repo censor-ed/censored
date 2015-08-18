@@ -23,6 +23,18 @@
           }
           return results;
         },
+        important: function(e) {
+          var i, len, preset, ref, results;
+          ref = this._visiblePresets();
+          results = [];
+          for (i = 0, len = ref.length; i < len; i++) {
+            preset = ref[i];
+            if (preset.important) {
+              results.push(preset.$set("checked", $(e.target).is(":checked")));
+            }
+          }
+          return results;
+        },
         values: function() {
           var i, len, preset, ref, results;
           ref = this.$data.presets;

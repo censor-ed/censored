@@ -29,6 +29,11 @@
                   <th class='name'>
                     <input class='form-control' placeholder='フィルタ' type='text' v-model='filterText'>
                   </th>
+                  <th>
+                    <label>
+                      <input type='checkbox' v-on='click: important'>重要</input>
+                    </label>
+                  </th>
                   <th></th>
                 </tr>
               </thead>
@@ -38,6 +43,7 @@
                     <input class='preset' type='checkbox' v-model='checked' value='{{regexp}}'>
                   </td>
                   <td>{{name}}</td>
+                  <td class='important'>{{important ? "!" : ""}}</td>
                   <td class='regexp'>
                     <span title='{{regexp}}'>{{truncate(regexp, 45)}}</span>
                   </td>
