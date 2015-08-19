@@ -47,11 +47,11 @@
           }
           return results;
         },
-        focus: function(e) {
-          $(e.target).select();
+        focus: function() {
+          $("#output").focus().select();
           return $("#decide").fadeOut();
         },
-        unfocus: function(e) {
+        unfocus: function() {
           return $("#decide").fadeIn();
         },
         truncate: function(strings, size) {
@@ -88,14 +88,14 @@
         },
         click: function(e) {
           return $(e.$el).find(":checkbox").click();
+        },
+        decide: function() {
+          $("body, html").animate({
+            scrollTop: $(document).height()
+          }, 500);
+          return this.focus();
         }
       }
-    });
-    $("#decide").on("click", function() {
-      $("body, html").animate({
-        scrollTop: $(document).height()
-      }, 500);
-      return $("#output").click();
     });
     $("#decide").css("left", ($("#presets").offset().left + $("#presets").width()) + "px");
     return $("#decide").css("top", ($("#presets").offset().top + 50) + "px");
