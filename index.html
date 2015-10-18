@@ -56,9 +56,15 @@
             </div>
             <textarea class='form-control' id='output' readonly rows='15' v-on='click: focus, blur: unfocus' wrap='off'>{{values().join("\n")}}</textarea>
           </div>
+          <div id='footer'>
+            <div class='text-right'>
+              <a href='presets.json' target='_blank'>
+                JSON
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <br>
     </div>
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.12.10/vue.min.js"></script>
