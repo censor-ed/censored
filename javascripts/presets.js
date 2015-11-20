@@ -6,7 +6,7 @@
         presets: []
       },
       created: function() {
-        return $.getJSON("./presets.json", (function(_this) {
+        return $.getJSON("./application.json", (function(_this) {
           return function(json) {
             return _this.$data.presets = json;
           };
