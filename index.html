@@ -3,7 +3,6 @@
   <head>
     <meta charset='utf-8'>
     <title>はちまバスターNGリスト</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/censored/stylesheets/application.css" rel="stylesheet" />
   </head>
   <body class='index'>
@@ -13,12 +12,29 @@
           <div class='page-header'>
             <h1>はちまバスターNGリスト</h1>
           </div>
-          <p>
-            Chromeの拡張機能
-            <a href="https://chrome.google.com/webstore/detail/%E3%81%AF%E3%81%A1%E3%81%BE%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC/kmjdodljbndkgaiakbdciipegjnbcmog?hl=ja">はちまバスター</a>
-            用の正規表現を提供します。ブロックしたいサイトをチェックして、結果をはちまバスターのオプションにコピペしてください。
-            オプションはChromeのその他のツール→拡張機能、またはアドレスバー右のはちまバスターのアイコンを右クリックから開けます。
-          </p>
+          <div class='panel-group'>
+            <div class='panel panel-default'>
+              <div class='panel-heading'>
+                <b>
+                  <a class='btn btn-sm btn-block' data-target='#info' data-toggle='collapse'>これはなに</a>
+                </b>
+              </div>
+              <div class='panel-collapse collapse' id='info'>
+                <div class='panel-body'>
+                  <p>
+                    Chromeの拡張機能
+                    <a href="https://chrome.google.com/webstore/detail/%E3%81%AF%E3%81%A1%E3%81%BE%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC/kmjdodljbndkgaiakbdciipegjnbcmog?hl=ja">はちまバスター</a>
+                    用の正規表現を提供します。ブロックしたいサイトをチェックして、結果をはちまバスターのオプションにコピペしてください。
+                    オプションはChromeのその他のツール→拡張機能、またはアドレスバー右のはちまバスターのアイコンを右クリックから開けます。
+                  </p>
+                  <p>
+                    またはリストの購読を有効にすることで自動的にフィルタが追加され、このリストの変更も自動的に反映されるようになります。
+                    リストは管理者の気分次第でなんとなく更新されます。隠しフィルタ的なものが追加されることはありません。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div id='presets'>
             <span class='btn btn-primary' id='decide' v-on='click: decide'>決定</span>
             <table class='table table-striped table-hover'>
@@ -67,6 +83,7 @@
       </div>
     </div>
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.12.10/vue.min.js"></script>
     <script src="/censored/javascripts/application.js"></script>
   </body>
