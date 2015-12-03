@@ -86,9 +86,6 @@
         checkedSize: function() {
           return this.values().length;
         },
-        click: function(e) {
-          return $(e.$el).find(":checkbox").click();
-        },
         decide: function() {
           $("body, html").animate({
             scrollTop: $(document).height()
