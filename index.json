@@ -1,0 +1,13 @@
+{
+    "lists": [
+	{
+	    "name": "はちまバスターNGリスト(重要)",
+	    "url":  "https://censor-ed.github.io/censored/important.json"
+	},
+
+	{
+	    "name": "はちまバスターNGリスト(すべて)",
+	    "url":  "https://censor-ed.github.io/censored/presets.json"
+	}
+    ]
+}
