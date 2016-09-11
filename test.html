@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+      $(function(){
+        $("#loadDynamic").on("click", function(){
+          var html = "<ul><li><a href=\"http://blog.esuteru.com/\">http://blog.esuteru.com/</a></li><li><a href=\"http://ift.tt/2bFrESZ\">http://ift.tt/2bFrESZ</a></li></ul>";
+          $("#ajax").html(html)
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Censored TEST</h1>
+    <div id="basic">
+      <ul>
+        <li>
+          <a href="http://blog.esuteru.com/">http://blog.esuteru.com/</a>
+        </li>
+        <li>
+          <a href="http://ift.tt/2bFrESZ">http://ift.tt/2bFrESZ</a>
+        </li>
+      </ul>
+    </div>
+    <h2>Dynamic</h2>
+    <div>
+      <button id="loadDynamic">Load</button>
+      <div id="ajax"></div>
+    </div>
+    <h2>iFrame</h2>
+    <iframe src="test.html">
+    </iframe>
+  </body>
+</html>
