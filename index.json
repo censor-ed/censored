@@ -8,6 +8,21 @@
 	{
 	    "name": "はちまバスターNGリスト(すべて)",
 	    "url":  "https://censor-ed.github.io/censored/presets.json"
+	},
+
+	{
+	    "name": "はちまバスターNGリスト(まとめサイト)",
+	    "url":  "https://censor-ed.github.io/censored/matome.json"
+	},
+
+	{
+	    "name": "はちまバスターNGリスト(サイゾー)",
+	    "url":  "https://censor-ed.github.io/censored/cyzo.json"
+	},
+
+	{
+	    "name": "はちまバスターNGリスト(Twitter)",
+	    "url":  "https://censor-ed.github.io/censored/twitter.json"
 	}
     ]
 }
