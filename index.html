@@ -7,85 +7,80 @@
   </head>
   <body class='index'>
     <div class='container'>
-      <div class='row'>
-        <div class='col-md-8 col-md-offset-2'>
-          <div class='page-header'>
-            <h1>はちまバスターNGリスト</h1>
+      <div class='page-header'>
+        <h1>はちまバスターNGリスト</h1>
+      </div>
+      <div class='row' id='app'>
+        <div class='col-md-8'>
+          <table class='table table-striped table-hover'>
+            <thead>
+              <tr>
+                <th class='check'>
+                  <input @click='toggle' type='checkbox'>
+                </th>
+                <th class='name'>
+                  <input class='form-control' placeholder='フィルタ' type='text' v-model='filterText'>
+                </th>
+                <th>
+                  <label>
+                    <input @click='important' type='checkbox'>
+                    重要
+                  </label>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr :class='{checked: filter.checked}' @click='check(filter)' v-for='filter in presets | filterBy filterText'>
+                <td>
+                  <input class='preset' type='checkbox' v-model='filter.checked' value='{{filter.regexp}}'>
+                </td>
+                <td>{{filter.name}}</td>
+                <td class='important'>{{filter.important ? "!" : ""}}</td>
+                <td class='regexp'>
+                  <span title='{{filter.regexp}}'>{{truncate(filter.regexp, 45)}}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class='col-md-4'>
+          <div class='text-right'>
+            選択した数:
+            <b>{{values().length}}</b>
+            /{{presets.length}}
           </div>
-          <div class='panel-group'>
-            <div class='panel panel-default'>
-              <div class='panel-heading'>
-                <b>
-                  <a class='btn btn-sm btn-block' data-target='#info' data-toggle='collapse'>これはなに</a>
-                </b>
-              </div>
-              <div class='panel-collapse collapse' id='info'>
-                <div class='panel-body'>
-                  <p>
-                    Chromeの拡張機能
-                    <a href="https://chrome.google.com/webstore/detail/%E3%81%AF%E3%81%A1%E3%81%BE%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC/kmjdodljbndkgaiakbdciipegjnbcmog?hl=ja">はちまバスター</a>
-                    用の正規表現を提供します。ブロックしたいサイトをチェックして、結果をはちまバスターのオプションにコピペしてください。
-                    オプションはChromeのその他のツール→拡張機能、またはアドレスバー右のはちまバスターのアイコンを右クリックから開けます。
-                  </p>
-                  <p>
-                    またはリストの購読を有効にすることで自動的にフィルタが追加され、このリストの変更も自動的に反映されるようになります。
-                    リストは管理者の気分次第でなんとなく更新されます。隠しフィルタ的なものが追加されることはありません。
-                  </p>
-                </div>
-              </div>
+          <textarea @blur='unfocus' @click='focus' class='form-control' id='output' readonly rows='15' wrap='off'>{{values().join("\n")}}</textarea>
+          <hr>
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <b>
+                これはなに
+              </b>
+            </div>
+            <div class='panel-body'>
+              <p>
+                Chromeの拡張機能
+                <a href="https://chrome.google.com/webstore/detail/%E3%81%AF%E3%81%A1%E3%81%BE%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC/kmjdodljbndkgaiakbdciipegjnbcmog?hl=ja">はちまバスター</a>
+                用の正規表現を提供します。ブロックしたいサイトをチェックして、結果をはちまバスターのオプションにコピペしてください。
+                オプションはChromeのその他のツール→拡張機能、またはアドレスバー右のはちまバスターのアイコンを右クリックから開けます。
+              </p>
+              <p>
+                またはリストの購読を有効にすることで自動的にフィルタが追加され、このリストの変更も自動的に反映されるようになります。
+                リストは管理者の気分次第でなんとなく更新されます。隠しフィルタ的なものが追加されることはありません。
+              </p>
             </div>
           </div>
-          <div id='presets'>
-            <span class='btn btn-primary' id='decide' v-on='click: decide'>決定</span>
-            <table class='table table-striped table-hover'>
-              <thead>
-                <tr>
-                  <th class='check'>
-                    <input type='checkbox' v-on='click: toggle'>
-                  </th>
-                  <th class='name'>
-                    <input class='form-control' placeholder='フィルタ' type='text' v-model='filterText'>
-                  </th>
-                  <th>
-                    <label>
-                      <input type='checkbox' v-on='click: important'>重要</input>
-                    </label>
-                  </th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-class='checked: checked' v-repeat='presets | filterBy filterText in name'>
-                  <td>
-                    <input class='preset' type='checkbox' v-model='checked' value='{{regexp}}'>
-                  </td>
-                  <td>{{name}}</td>
-                  <td class='important'>{{important ? "!" : ""}}</td>
-                  <td class='regexp'>
-                    <span title='{{regexp}}'>{{truncate(regexp, 45)}}</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class='text-right'>
-              選択した数:{{checkedSize()}}/{{$data.presets.length}}
-            </div>
-            <textarea class='form-control' id='output' readonly rows='15' v-on='click: focus, blur: unfocus' wrap='off'>{{values().join("\n")}}</textarea>
-          </div>
-          <div id='footer'>
-            <div class='text-right'>
-              <a href='https://github.com/censor-ed/censored/commits/gh-pages'>更新履歴</a>
-              JSON:
-              <a href='presets.json' target='_blank'>全て</a>
-              <a href='important.json' target='_blank'>重要</a>
-            </div>
+          <div class='list-group'>
+            <a class='list-group-item' href='https://github.com/censor-ed/censored/commits/gh-pages'>更新履歴</a>
+            <a class='list-group-item' href='presets.json' target='_blank'>JSON(全て)</a>
+            <a class='list-group-item' href='important.json' target='_blank'>JSON(重要)</a>
           </div>
         </div>
       </div>
     </div>
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/0.12.10/vue.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
     <script src="/censored/javascripts/application.js"></script>
   </body>
 </html>
