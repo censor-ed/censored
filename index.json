@@ -23,6 +23,11 @@
 	{
 	    "name": "はちまバスターNGリスト(Twitter)",
 	    "url":  "https://censor-ed.github.io/censored/twitter.json"
+	},
+
+	{
+	    "name": "はちまバスターNGリスト(ゲーム攻略Wiki)",
+	    "url":  "https://censor-ed.github.io/censored/wiki.json"
 	}
     ]
 }

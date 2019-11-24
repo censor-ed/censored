@@ -1,0 +1,1 @@
+{"name":"はちまバスターNGリスト(ゲーム攻略Wiki)","description":"はちまバスターNGリストに登録されたゲーム攻略Wikiのフィルタ","site":"https://censor-ed.github.io/censored","filters":[{"name":"GameWith","regexp":"gamewith\\.jp"},{"name":"Game8","regexp":"game8\\.jp"},{"name":"GAMY","regexp":"gamy\\.jp"},{"name":"アルテマ","regexp":"altema\\.jp"}]}

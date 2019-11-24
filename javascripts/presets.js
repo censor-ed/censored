@@ -93,6 +93,9 @@
             }
           }
           return results;
+        },
+        tags: function(filter) {
+          return filter.tags.join(" ");
         }
       }
     });

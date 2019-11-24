@@ -34,7 +34,7 @@
                 <td>
                   <input class='preset' type='checkbox' v-model='filter.checked' value='{{filter.regexp}}'>
                 </td>
-                <td>{{filter.name}}</td>
+                <td :title='tags(filter)'>{{filter.name}}</td>
                 <td class='important'>{{filter.important ? "!" : ""}}</td>
                 <td class='regexp'>
                   <span title='{{filter.regexp}}'>{{truncate(filter.regexp, 45)}}</span>
@@ -44,12 +44,14 @@
           </table>
         </div>
         <div class='col-md-4'>
-          <div class='text-right'>
-            選択した数:
-            <b>{{values().length}}</b>
-            /{{presets.length}}
+          <div class='sticky'>
+            <div class='text-right'>
+              選択した数:
+              <b>{{values().length}}</b>
+              /{{presets.length}}
+            </div>
+            <textarea @blur='unfocus' @click='focus' class='form-control' id='output' readonly rows='15' wrap='off'>{{values().join("\n")}}</textarea>
           </div>
-          <textarea @blur='unfocus' @click='focus' class='form-control' id='output' readonly rows='15' wrap='off'>{{values().join("\n")}}</textarea>
           <hr>
           <div class='panel panel-default'>
             <div class='panel-heading'>
