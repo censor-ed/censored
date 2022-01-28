@@ -1,1 +1,166 @@
-{"name":"はちまバスターNGリスト(重要)","description":"はちまバスターNGリストで重要とマークされたフィルタ","site":"https://censor-ed.github.io/censored","filters":[{"name":"はちま起稿","regexp":"blog\\.esuteru\\.com"},{"name":"はちま起稿(Twitter)","regexp":"twitter\\.com/htmk73([/?].*)?$"},{"name":"はちま起稿(Facebook)","regexp":"ja-jp\\.facebook\\.com/pages/%E3%81%AF%E3%81%A1%E3%81%BE%E8%B5%B7%E7%A8%BF/131806350359370"},{"name":"はちまch","regexp":"ch\\.esuteru\\.com"},{"name":"はちまちゃんねる","regexp":"www\\.youtube\\.com/user/hatimaki73/"},{"name":"はちまのなにか","regexp":"blog\\.esuteru\\.com\\.2-t\\.jp"},{"name":"はちま(Google+)","regexp":"plus\\.google\\.com/105059941846156647356"},{"name":"オレ的ゲーム速報＠刃","regexp":"jin115\\.com"},{"name":"オレ的ゲーム速報＠刃(Twitter)","regexp":"twitter\\.com/jin115([/?].*)?$"},{"name":"やらおん","regexp":"yaraon-blog\\.com"},{"name":"やらおん(Twitter)","regexp":"twitter\\.com/yarare_kanrinin([/?].*)?$"},{"name":"ハムスター速報","regexp":"hamusoku\\.com"},{"name":"ハムスター速報(Twitter)","regexp":"twitter\\.com/hamusoku([/?].*)?$"},{"name":"ニュー速VIP","regexp":"blog\\.livedoor\\.jp/insidears/‎"},{"name":"ニュー速VIP(Twitter)","regexp":"twitter\\.com/news_vip_blog‎([/?].*)?$"},{"name":"痛いニュース(ノ∀`).","regexp":"blog\\.livedoor\\.jp/dqnplus"},{"name":"痛いニュース(ノ∀`).(Twitter)","regexp":"twitter\\.com/2chdqnplus([/?].*)?$"},{"name":"アルファルファモザイク","regexp":"alfalfalfa\\.com"},{"name":"アルファルファモザイク(Twitter)","regexp":"twitter\\.com/alfalfafafa([/?].*)?$"}]}
+{
+  "name": "はちまバスターNGリスト(重要)",
+  "description": "はちまバスターNGリストで重要とマークされたフィルタ",
+  "site": "https://censor-ed.github.io/censored",
+  "filters": [
+    {
+      "name": "はちま起稿",
+      "regexp": "blog\\.esuteru\\.com",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "はちま起稿(Twitter)",
+      "regexp": "twitter\\.com/htmk73([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "はちま起稿(Facebook)",
+      "regexp": "ja-jp\\.facebook\\.com/pages/%E3%81%AF%E3%81%A1%E3%81%BE%E8%B5%B7%E7%A8%BF/131806350359370",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "はちまch",
+      "regexp": "ch\\.esuteru\\.com",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "はちまちゃんねる",
+      "regexp": "www\\.youtube\\.com/user/hatimaki73/",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "はちまのなにか",
+      "regexp": "blog\\.esuteru\\.com\\.2-t\\.jp",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "はちま(Google+)",
+      "regexp": "plus\\.google\\.com/105059941846156647356",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "オレ的ゲーム速報＠刃",
+      "regexp": "jin115\\.com",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "オレ的ゲーム速報＠刃(Twitter)",
+      "regexp": "twitter\\.com/jin115([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "やらおん",
+      "regexp": "yaraon-blog\\.com",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "やらおん(Twitter)",
+      "regexp": "twitter\\.com/yarare_kanrinin([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ハムスター速報",
+      "regexp": "hamusoku\\.com",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "ハムスター速報(Twitter)",
+      "regexp": "twitter\\.com/hamusoku([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ニュー速VIP",
+      "regexp": "blog\\.livedoor\\.jp/insidears/‎",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "ニュー速VIP(Twitter)",
+      "regexp": "twitter\\.com/news_vip_blog‎([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "痛いニュース(ノ∀`).",
+      "regexp": "blog\\.livedoor\\.jp/dqnplus",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "痛いニュース(ノ∀`).(Twitter)",
+      "regexp": "twitter\\.com/2chdqnplus([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "アルファルファモザイク",
+      "regexp": "alfalfalfa\\.com",
+      "important": true,
+      "tags": [
+        "まとめ"
+      ]
+    },
+    {
+      "name": "アルファルファモザイク(Twitter)",
+      "regexp": "twitter\\.com/alfalfafafa([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    }
+  ]
+}

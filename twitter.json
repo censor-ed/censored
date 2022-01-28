@@ -1,1 +1,115 @@
-{"name":"はちまバスターNGリスト(Twitter)","description":"はちまバスターNGリストに登録されたTwitterのフィルタ","site":"https://censor-ed.github.io/censored","filters":[{"name":"はちま起稿(Twitter)","regexp":"twitter\\.com/htmk73([/?].*)?$"},{"name":"オレ的ゲーム速報＠刃(Twitter)","regexp":"twitter\\.com/jin115([/?].*)?$"},{"name":"オレ的ゲーム速報＠刃(Twitter2)","regexp":"twitter\\.com/jin115_2nd([/?].*)?$"},{"name":"やらおん(Twitter)","regexp":"twitter\\.com/yarare_kanrinin([/?].*)?$"},{"name":"ハムスター速報(Twitter)","regexp":"twitter\\.com/hamusoku([/?].*)?$"},{"name":"ニュー速VIP(Twitter)","regexp":"twitter\\.com/news_vip_blog‎([/?].*)?$"},{"name":"痛いニュース(ノ∀`).(Twitter)","regexp":"twitter\\.com/2chdqnplus([/?].*)?$"},{"name":"アルファルファモザイク(Twitter)","regexp":"twitter\\.com/alfalfafafa([/?].*)?$"},{"name":"ぽけりん(Twitter)","regexp":"twitter\\.com/matome_pokemon([/?].*)?$"},{"name":"ダメージ0(Twitter)","regexp":"twitter\\.com/damagezero([/?].*)?$"},{"name":"ゆさアニ(Twitter)","regexp":"twitter\\.com/yusa_yusaani([/?].*)?$"},{"name":"オタク.com(Twitter)","regexp":"twitter\\.com/otakomu([/?].*)?$"}]}
+{
+  "name": "はちまバスターNGリスト(Twitter)",
+  "description": "はちまバスターNGリストに登録されたTwitterのフィルタ",
+  "site": "https://censor-ed.github.io/censored",
+  "filters": [
+    {
+      "name": "はちま起稿(Twitter)",
+      "regexp": "twitter\\.com/htmk73([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "オレ的ゲーム速報＠刃(Twitter)",
+      "regexp": "twitter\\.com/jin115([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "オレ的ゲーム速報＠刃(Twitter2)",
+      "regexp": "twitter\\.com/jin115_2nd([/?].*)?$",
+      "important": false,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "やらおん(Twitter)",
+      "regexp": "twitter\\.com/yarare_kanrinin([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ハムスター速報(Twitter)",
+      "regexp": "twitter\\.com/hamusoku([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ニュー速VIP(Twitter)",
+      "regexp": "twitter\\.com/news_vip_blog‎([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "痛いニュース(ノ∀`).(Twitter)",
+      "regexp": "twitter\\.com/2chdqnplus([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "アルファルファモザイク(Twitter)",
+      "regexp": "twitter\\.com/alfalfafafa([/?].*)?$",
+      "important": true,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ぽけりん(Twitter)",
+      "regexp": "twitter\\.com/matome_pokemon([/?].*)?$",
+      "important": false,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ダメージ0(Twitter)",
+      "regexp": "twitter\\.com/damagezero([/?].*)?$",
+      "important": false,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "ゆさアニ(Twitter)",
+      "regexp": "twitter\\.com/yusa_yusaani([/?].*)?$",
+      "important": false,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    },
+    {
+      "name": "オタク.com(Twitter)",
+      "regexp": "twitter\\.com/otakomu([/?].*)?$",
+      "important": false,
+      "tags": [
+        "まとめ",
+        "twitter"
+      ]
+    }
+  ]
+}
